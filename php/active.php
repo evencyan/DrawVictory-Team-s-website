@@ -53,7 +53,7 @@ while ($row = $result->fetch_assoc()){
         $clean =mysqli_query($connection,"UPDATE `t_user` SET `token` = ''  WHERE `t_user`.`id` =" .$id);
         //创建一个结果集
 	if($sql){
-		echo '账户激活成功！';
+      echo '账户激活成功！';
     tooltipBox('');
 	}else{
 		echo '账户激活失败';
