@@ -1,0 +1,203 @@
+/*代码归DrawVictory Team绘赢团队所有
+DrawVictory Team ©2022 Copyright
+Dinosaur.YH  编写
+*/
+body{
+    background-image: url(../picture/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    font-family: sans-serif;
+}
+*{     
+    padding: 0px;    
+    margin: 0px;    
+    border: 0px;
+}
+.nav{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 95px;
+    background: rgba(51,51,51,1);
+    box-shadow: 0px 3px 20px rgba(51,51,51,1);
+    z-index: 5;
+}
+.nav > .color{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: #ff7675;;
+}
+.nav > .logo{
+    position: absolute;
+    width: 240px;
+    height: 60px;
+}
+.nav > .logo > .font{
+    position: absolute;
+    right: 0px;
+    top: 6px;
+}
+.nav > .logo > .font > p{
+    color: white;
+    line-height: 19px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.nav > .xian{
+    position: absolute;
+    height: 35px;
+    width: 2px;
+    top: 9px;
+    left: 65px;
+    background: white;
+    z-index: 5;
+}
+.nav > .logo > .pic{
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+.nav > .nav-a{
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    bottom: 0;
+}
+.nav-a ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    right: 5%;
+}
+.nav-a ul  .nav-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc((100% / 6)*1); /*注意：如果标签有多个，那么将(100% / x)*1)中的x改为标签数*/
+    height: 4px;
+    border-radius: 2px;
+    transition: .5s;
+}
+.nav-a ul li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+.nav-a ul li a {
+    color: white;
+    font: 100 18px '优设标题黑';
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    transition: .5s;
+    list-style: none;
+    text-decoration: none; 
+}
+.nav-a ul li:nth-child(1):hover~.nav-box{
+    left: calc(100% / 6 *0);
+    background-color: #DE3F51;
+    box-shadow: 0 0 10px #DE3F51,
+                0 0 20px #DE3F51,
+                0 0 40px #DE3F51,
+                0 0 80px #DE3F51,
+                0 0 160px #DE3F51,
+                0 0 200px #DE3F51;}
+.nav-a ul li:nth-child(2):hover~.nav-box{
+    left: calc(100% / 6 *1);
+    background-color: #E9A944;
+    box-shadow: 0 0 10px #E9A944,
+                0 0 20px #E9A944,
+                0 0 40px #E9A944,
+                0 0 80px #E9A944,
+                0 0 160px #E9A944,
+                0 0 200px #E9A944;
+}
+.nav-a ul li:nth-child(3):hover~.nav-box{
+    left: calc(100% / 6 *2);
+    background-color: #F5E852;
+    box-shadow: 0 0 10px #F5E852,
+                0 0 20px #F5E852,
+                0 0 40px #F5E852,
+                0 0 80px #F5E852,
+                0 0 160px #F5E852,
+                0 0 200px #F5E852;
+}
+.nav-a ul li:nth-child(4):hover~.nav-box{
+    left: calc(100% / 6 *3);
+    background-color: #92D047;
+    box-shadow: 0 0 10px #92D047,
+                0 0 20px #92D047,
+                0 0 40px #92D047,
+                0 0 80px #92D047,
+                0 0 160px #92D047,
+                0 0 200px #92D047;
+}
+.nav-a ul li:nth-child(5):hover~.nav-box{
+    left: calc(100% / 6 *4);
+    background-color: #8A1DEC;
+    box-shadow: 0 0 10px #8A1DEC,
+                0 0 20px #8A1DEC,
+                0 0 40px #8A1DEC,
+                0 0 80px #8A1DEC,
+                0 0 160px #8A1DEC,
+                0 0 200px #8A1DEC;
+}
+.nav-a ul li:nth-child(6):hover~.nav-box{
+    left: calc(100% / 6 *5);
+    background-color: #24C9F0;
+    box-shadow: 0 0 10px #24C9F0,
+                0 0 20px #24C9F0,
+                0 0 40px #24C9F0,
+                0 0 80px #24C9F0,
+                0 0 160px #24C9F0,
+                0 0 200px #24C9F0;
+} 
+.nav-a ul li a:nth-child(1):hover{
+    color: #ff7675;
+}
+.index{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    text-align: center;
+}
+.index > .b_logo{
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+}
+.index > .b_logo > p{
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    
+}
+#type-text{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.blinking-cursor {
+    font-size: 18px;
+    color: white;
+    animation: blink 1s steps(2, start) infinite;
+  }
+  
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }

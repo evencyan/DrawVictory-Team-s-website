@@ -1,0 +1,28 @@
+/*代码归DrawVictory Team绘赢团队所有
+DrawVictory Team ©2022 Copyright
+Dinosaur.YH  编写
+*/
+.PromptBox {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.prompt {
+    background: #000;
+    color: #fff;
+    margin: 10px auto;
+    padding: 15px 50px;
+    border-radius: 50px;
+    user-select: none;/*取消复制*/
+    transition: .5s;
+    transform: translate(-50%);
+    position: relative;
+    top: -100px;
+    opacity: 0;
+}
+
+.shown {
+    top: 0;
+    opacity: 1;
+}

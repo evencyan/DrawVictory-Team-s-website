@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录/注册</title>
+    <link rel="shortcut icon" href="../picture/logo.ico" type="image/x-ico"/>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <script src="../javascript/background.js"></script>
+    <script src="../javascript/verification.js"></script>
+    <script src='../javascript/ajax_v.js'></script>
+    <div class="bac"></div>
+    <div class="PromptBox"></div>  <!--提示框-->
+    <div class="container">
+        <div class="form-box">
+            <!-- 注册 -->
+            <div class="register-box hidden">
+                <h1>register</h1>
+                <input type="text" name="number" class="number" placeholder="用户名">
+                <input type="email" name="email" class="email" placeholder="邮箱">
+                <input type="password" name="password" class="password"  placeholder="密码">
+                <input type="password" name="password2" class="password2" placeholder="确认密码">
+              <button onclick="verification();">注册</button>
+            </div>
+            <!-- 登录 -->
+            <div class="login-box">
+                <h1>login</h1>
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+                <button onclick="background()">登录</button>
+            </div>
+            <script type="text/javascript" src="../javascript/jquery-3.5.1.min.js"></script> 
+            <script src="../javascript/ajax_register.js"></script>
+            <script src="../javascript/alert.js"></script>
+        </div>
+        <div class="con-box left">
+            <h2>欢迎来到<span>宠物之家</span></h2>
+            <p>快来领取你的专属<span>宠物</span>吧</p>
+            <p>已有账号</p>
+            <button id="login">去登录</button>
+        </div>
+        <div class="con-box right">
+            <h2>欢迎来到<span>宠物之家</span></h2>
+            <p>快来看看你的可爱<span>宠物</span>吧</p>
+            <p>没有账号？</p>
+            <button id="register">去注册</button>
+        </div>
+    </div>
+    <script>
+        // 要操作到的元素
+        let login=document.getElementById('login');
+        let register=document.getElementById('register');
+        let form_box=document.getElementsByClassName('form-box')[0];
+        let register_box=document.getElementsByClassName('register-box')[0];
+        let login_box=document.getElementsByClassName('login-box')[0];
+        // 去注册按钮点击事件
+        register.addEventListener('click',()=>{
+            form_box.style.transform='translateX(80%)';
+            login_box.classList.add('hidden');
+            register_box.classList.remove('hidden');
+        })
+        // 去登录按钮点击事件
+        login.addEventListener('click',()=>{
+            form_box.style.transform='translateX(0%)';
+            register_box.classList.add('hidden');
+            login_box.classList.remove('hidden');
+        })
+    </script>
+</body>
+
+</html>
