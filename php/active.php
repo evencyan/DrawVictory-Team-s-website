@@ -10,6 +10,7 @@
     <link href="../css/active.css" rel="stylesheet">
     <script src="../crooper/cropper.min.js"></script>
     <script src="../javascript/alert.js"></script>
+    <script src="../javascript/picture.js"></script>
     <title>账户激活</title>
 </head>
 <body>
@@ -27,7 +28,7 @@ while ($row = $result->fetch_assoc()){
 }if($s){
     if($nowtime>$time){ //24hour
         echo $row['token_exptime'];
-        echo  "您的激活有效期已过，请登录您的帐号重新发送激活邮件."; 
+        echo  "<div class='p1'>您的激活有效期已过，请登录您的帐号重新发送激活邮件.</div>"; 
         $cle =mysqli_query($connection,"UPDATE `t_user` SET `token` = '', WHERE `t_user`.`id` =" .$id);
     }else{ 
         	static $realip;
@@ -49,18 +50,19 @@ while ($row = $result->fetch_assoc()){
     } 
   }
   $s_ip = $realip;
-        $sql = mysqli_query($connection,"UPDATE `t_user` SET status='1',ip='$s_ip'  WHERE id=".$id);
-        $clean =mysqli_query($connection,"UPDATE `t_user` SET `token` = ''  WHERE `t_user`.`id` =" .$id);
+        //$sql = mysqli_query($connection,"UPDATE `t_user` SET status='1',ip='$s_ip'  WHERE id=".$id);
+        //$clean =mysqli_query($connection,"UPDATE `t_user` SET `token` = ''  WHERE `t_user`.`id` =" .$id);
         //创建一个结果集
-	if($sql){
-      echo '账户激活成功！';
-    tooltipBox('');
+        //$sql
+	if(1 == 1){
+      echo "<div class='p1'>账户激活成功！接下来请完成您的账户初始操作</div>";
+      echo "<button class='btn' onclick='picture()'>START</button>";
 	}else{
-		echo '账户激活失败';
+		echo "<div class='p1'>账户激活失败'</div>";
 	}
 } }
 else{
-    echo "抱歉，您的激活链接无效。";
+    echo "<div class='p1'>抱歉，您的激活链接无效。</div>";
 }
 mysqli_close( $connection );
 ?></html>
